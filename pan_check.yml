@@ -1,0 +1,12 @@
+---
+- hosts: panos
+  connection: local
+  gather_facts: False
+  environment:
+    PYTHONHTTPSVERIFY: 0
+  tasks:
+    - name: check if ready
+      panos_check:
+        username: "{{ panos_username }} "
+        password: "{{ panos_password }}"
+        ip_address: "{{ ansible_ssh_host }}"
