@@ -5,7 +5,7 @@
   environment:
     PYTHONHTTPSVERIFY: 0
   tasks:
-    - name: check if ready
+    - name: CHECK iF READY
       panos_check:
         username: "{{ panos_username }} "
         password: "{{ panos_password }}"
